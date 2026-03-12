@@ -151,8 +151,8 @@ You must obtain the following credentials from the bKash Merchant Portal:
 - For production, use the Live API credentials from your merchant account.
 
 ## Author
-Amit Singha 
-Backend Developer
+- Amit Singha 
+- Backend Developer
 
 ## Learning Outcome
 Through this project I practiced:
