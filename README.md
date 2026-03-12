@@ -1,23 +1,23 @@
 # Simple E-Commerce with bKash Payment Gateway
 
 ## Project Overview
-A simple e-commerce web application built with **Laravel** to demonstrate **bKash Payment Gateway Integration**.  
-Customers can place orders and complete payments using **bKash**, while the admin panel manages products, orders, deliveries, and refunds.
+A simple e-commerce web application built with Laravel to demonstrate bKash Payment Gateway Integration.  
+Customers can place orders and complete payments using bKash, while the admin panel manages products, orders, deliveries, and refunds.
 
-The main purpose of this project is to learn and implement **bKash payment integration in a real-world e-commerce workflow** using Laravel.
+The main purpose of this project is to learn and implement bKash payment integration in a real-world e-commerce workflow using Laravel.
 
 ## Features
 ### Frontend Features
 - Homepage displays multiple products.
-- Each product has an **Order Now** button.
-- Clicking **Order Now** opens an order form.
+- Each product has an Order Now button.
+- Clicking Order Now opens an order form.
 - Customers must provide necessary order information.
-- After clicking **Confirm Order**, the user is redirected to the **bKash payment page**.
-- Customers complete payment using **bKash number, OTP, and PIN**.
-- After successful payment, the **order is confirmed**.
+- After clicking Confirm Order, the user is redirected to the bKash payment page.
+- Customers complete payment using bKash number, OTP, and PIN.
+- After successful payment, the order is confirmed.
 
 ### Admin Panel Features
-After logging in, the admin is redirected to the **Dashboard**.
+After logging in, the admin is redirected to the Dashboard.
 
 #### Dashboard
 Displays important statistics:
@@ -38,26 +38,26 @@ Displays important statistics:
 
 ##### Add Product Page
 - Product creation form
-- Validation handled using **Laravel Form Request**
+- Validation handled using Laravel Form Request
 
 #### Order Management
 ##### Order List Page
 - Orders displayed in a table
 - Pagination (10 orders per page)
 - Orders can be viewed in detail
-- **Mark as Delivered** button available
+- Mark as Delivered button available
 
-Clicking **Mark as Delivered** indicates that the product has been delivered successfully.
+Clicking Mark as Delivered indicates that the product has been delivered successfully.
 
 #### Order Details
 Inside the order view page:
 - Full order information
-- **Send Payment Refund** button available
+- Send Payment Refund button available
 
-Clicking this button opens a form where the admin must provide a **refund reason**.
+Clicking this button opens a form where the admin must provide a refund reason.
 After submission:
-- The order is **cancelled**
-- The payment is **refunded via bKash**
+- The order is cancelled
+- The payment is refunded via bKash
 
 #### Delivery List
 - Displays delivered products
@@ -122,8 +122,36 @@ Then open:
 http://127.0.0.1:8000
 ```
 
+## bKash Configuration
+To enable the bKash payment gateway, you need to configure your bKash API credentials inside the `BkashController`.
+
+### Step 1: Open the Controller File
+```
+app/Http/Controllers/BkashController.php
+```
+
+### Step 2: Set Your bKash Credentials
+Update the following values inside the controller:
+- bKash API Base URL
+- App Key
+- App Secret
+- Username
+- Password
+
+### Required bKash Credentials
+You must obtain the following credentials from the bKash Merchant Portal:
+- bKash API Base URL
+- App Key
+- App Secret
+- Username
+- Password
+
+### Important
+- For development and testing, use the Sandbox API provided by bKash.  
+- For production, use the Live API credentials from your merchant account.
+
 ## Author
-**Amit Singha**  
+Amit Singha 
 Backend Developer
 
 ## Learning Outcome
