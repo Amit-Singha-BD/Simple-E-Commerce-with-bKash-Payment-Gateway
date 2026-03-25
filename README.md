@@ -78,6 +78,12 @@ After submission:
 - MySQL
 - bKash Payment Gateway API
 
+## Requirements
+- PHP 8.0+
+- Composer
+- MySQL
+- Laravel 10+
+
 ## Installation Guide
 Follow these 7 steps to install and set up the project:
 
