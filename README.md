@@ -6,8 +6,8 @@ Customers can place orders and complete payments using bKash, while the admin pa
 
 The main purpose of this project is to learn and implement bKash payment integration in a real-world e-commerce workflow using Laravel.
 
-## Features
-### Frontend Features
+## Application Overview
+### Front-End (Public Website)
 - Homepage displays multiple products.
 - Each product has an Order Now button.
 - Clicking Order Now opens an order form.
@@ -16,7 +16,7 @@ The main purpose of this project is to learn and implement bKash payment integra
 - Customers complete payment using bKash number, OTP, and PIN.
 - After successful payment, the order is confirmed.
 
-### Admin Panel Features
+### Back-End (Admin Panel)
 After logging in, the admin is redirected to the Dashboard.
 
 #### Dashboard
@@ -81,38 +81,45 @@ After submission:
 ## Installation Guide
 Follow these 7 steps to install and set up the project:
 
-### Step 1: Clone the Repository
+### Step 1
+#### Clone the Repository
 ```
 git clone https://github.com/Amit-Singha-BD/Simple-E-Commerce-with-bKash-Payment-Gateway.git
 cd Simple-E-Commerce-with-bKash-Payment-Gateway
 ```
 
-### Step 2: Install Dependencies
+### Step 2
+#### Install Dependencies
 ```
 composer install
 ```
 
-### Step 3: Setup Environment File
+### Step 3
+#### Setup Environment File
 ```
 cp .env.example .env
 ```
 
-### Step 4: Generate Application Key
+### Step 4
+#### Generate Application Key
 ```
 php artisan key:generate
 ```
 
-### Step 5: Run Migrations
+### Step 5
+#### Run Migrations
 ```
 php artisan migrate
 ```
 
-### Step 6: Run Seeder
+### Step 6
+#### Run Seeder
 ```
 php artisan db:seed
 ```
 
-### Step 7: Start the Development Server
+### Step 7
+#### Start the Development Server
 ```
 php artisan serve
 ```
@@ -125,12 +132,14 @@ http://127.0.0.1:8000
 ## bKash Configuration
 To enable the bKash payment gateway, you need to configure your bKash API credentials inside the `BkashController`.
 
-### Step 1: Open the Controller File
+### Step 1
+#### Open the Controller File
 ```
 app/Http/Controllers/BkashController.php
 ```
 
-### Step 2: Set Your bKash Credentials
+### Step 2
+#### Set Your bKash Credentials
 Update the following values inside the controller:
 - bKash API Base URL
 - App Key
@@ -150,11 +159,7 @@ You must obtain the following credentials from the bKash Merchant Portal:
 - For development and testing, use the Sandbox API provided by bKash.  
 - For production, use the Live API credentials from your merchant account.
 
-## Author
-- Amit Singha 
-- Backend Developer
-
-## Learning Outcome
+## Learning Objectives
 Through this project I practiced:
 - bKash payment gateway integration
 - Laravel CRUD operations
@@ -163,3 +168,8 @@ Through this project I practiced:
 - Order management system
 - Refund workflow
 - Admin dashboard statistics
+
+## Author
+- Amit Singha 
+- Backend Developer
+
